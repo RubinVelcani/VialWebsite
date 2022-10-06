@@ -49,6 +49,13 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.iframe-body {
+  width: 100vw;
+  margin-top: 100px;
+  background: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* CIRCLES */
 
 .circle-top {
@@ -267,8 +274,8 @@ body {
 /* MAIN HOME */
 
 .section-home {
-  margin: 0 1.5em;
-  margin-top: 80px;
+  margin: 0 1.5em !important;
+  margin-top: 80px !important;
 }
 
 .home-wrapper {
@@ -279,12 +286,17 @@ body {
   align-items: center;
 }
 
+.home-video-wrapper {
+  margin: 0 1.5em;
+}
+
 .home-video-header {
   font-size: 66px;
   font-weight: 600;
 }
 
 .home-video-subheader {
+  z-index: 160;
   margin-top: 133px;
   font-size: 36px;
   font-weight: 600;
@@ -339,20 +351,26 @@ body {
 }
 
 @keyframes rotate {
- 10%, 15%, 100% {
-            transform: translateY(0);
+  10%,
+  15%,
+  100% {
+    transform: translateY(0);
   }
-  25%,36% {
-            transform: translateY(-45px);
+  25%,
+  36% {
+    transform: translateY(-45px);
   }
-  46%,57% {
-            transform: translateY(-90px);
+  46%,
+  57% {
+    transform: translateY(-90px);
   }
-  67%,78% {
-            transform: translateY(-135px);
+  67%,
+  78% {
+    transform: translateY(-135px);
   }
-  88%, 99% {
-            transform: translateY(-180px);
+  88%,
+  99% {
+    transform: translateY(-180px);
   }
 }
 
@@ -659,6 +677,8 @@ ol > li:last-child::before {
 }
 
 .roadmap-title {
+  position: relative;
+  z-index: 200;
   writing-mode: vertical-lr;
   text-orientation: upright;
   padding: 0.5em 0.125em;
@@ -666,14 +686,18 @@ ol > li:last-child::before {
 }
 
 .roadmap-title-passed {
+  position: relative;
+  z-index: 200;
   color: #111111;
   background: #b4d902;
   border-radius: 16px;
 }
 
 .roadmap-title-unpassed {
+  position: relative;
+  z-index: 200;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.35);
+  background: #895ec6;
   border-radius: 16px;
 }
 
@@ -830,6 +854,48 @@ ol > li:last-child::before {
 
 .content-subheader {
   font-size: 24px;
+}
+
+.influencer-newsletter-wrapper {
+  height: 100%;
+}
+
+.influencer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 20px;
+}
+
+.influencer-newsletter-header {
+  font-size: 24px;
+}
+
+.newsletter-label {
+  font-size: 20px;
+}
+
+.newsletter-button {
+  color: #111111;
+  background: rgba(180, 217, 2, 1);
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 0.5em 1em;
+  margin-top: 30px;
+}
+
+.influencer-newsletter-form > input {
+  position: relative;
+  opacity: 1;
+  z-index: inherit;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.49) rgba(255, 255, 255, 0.25)
+    rgba(255, 255, 255, 0.49);
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0.25em 0.25em;
 }
 
 .download-wrapper {
@@ -1115,6 +1181,39 @@ a.icon {
     max-width: 920px;
   }
 
+  .circle-top {
+    position: absolute;
+    max-width: max-content;
+    width: 500vw;
+    top: 0;
+    left: 0;
+    margin-top: -50%;
+    margin-left: -30%;
+    opacity: 80%;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .circle-top-1 {
+    position: absolute;
+    max-width: max-content;
+    width: 120vw;
+    margin-top: 200%;
+    margin-right: -100%;
+    opacity: 80%;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .circle-top-2,
+  .circle-top-3,
+  .circle-top-4,
+  .circle-top-5 {
+    display: none;
+  }
+
   /* DESKTOP HOME */
   .center {
     position: relative;
@@ -1156,28 +1255,33 @@ a.icon {
   .carousel .change_outer .element {
     display: block;
   }
-  
+
   @keyframes rotate {
     0% {
       transform: translateY(-10px);
     }
-   10%, 15%, 100% {
-              transform: translateY(-10px);
+    10%,
+    15%,
+    100% {
+      transform: translateY(-10px);
     }
-    25%,36% {
-              transform: translateY(-70px);
+    25%,
+    36% {
+      transform: translateY(-70px);
     }
-    46%,57% {
-              transform: translateY(-125px);
+    46%,
+    57% {
+      transform: translateY(-125px);
     }
-    67%,78% {
-              transform: translateY(-180px);
+    67%,
+    78% {
+      transform: translateY(-180px);
     }
-    88%, 99% {
-              transform: translateY(-235px);
+    88%,
+    99% {
+      transform: translateY(-235px);
     }
   }
-  
 
   .element {
     min-width: max-content;
@@ -1345,6 +1449,7 @@ a.icon {
 
   .roadmap-head:before,
   .roadmap-head:after {
+    z-index: 120;
     content: "";
     width: 100%;
     border-bottom: 1px solid;
@@ -1401,7 +1506,7 @@ a.icon {
   }
 
   .inspire-image-2-wrapper {
-    margin-right: -400px
+    margin-right: -400px;
   }
 
   /* DESKTOP INFLUENCER */
@@ -1422,6 +1527,10 @@ a.icon {
     height: 200px;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .influencer-newsletter-wrapper {
+    margin: 0 auto;
   }
 
   .download-links-wrapper {
