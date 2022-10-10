@@ -4,8 +4,6 @@ let burgerMenu = document.getElementById('burger-menu');
 let overlay = document.getElementById('menu-wrapper');
 let header = document.getElementById('header-wrapper');
 
-console.log(header);
-
 let navButtons = document.getElementsByClassName('nav-button');
 let socialsButtons = document.getElementsByClassName('socials-button');
 
